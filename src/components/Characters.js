@@ -15,7 +15,10 @@ function Characters({ characters }) {
 }
 
 Characters.propTypes = {
-  characters: PropTypes.array.isRequired
+  characters: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    photoURL: PropTypes.string.isRequired
+  })).isRequired
 };
 
 export default Characters;

@@ -2,6 +2,8 @@ import { getCharacters } from '../services/avatarApi';
 
 export const FETCH_CHARACTERS = 'FETCH_CHARACTERS';
 
+export const FETCH_CHARACTERS_LOADING = 'FETCH_CHARACTERS_LOADING';
+
 // thunk 
 // export const fetchCharacters = () => dispatch => {
 //   getCharacters()
@@ -17,5 +19,6 @@ export const FETCH_CHARACTERS = 'FETCH_CHARACTERS';
 
 export const fetchCharacters = () => ({
   type: FETCH_CHARACTERS,
-  payload: getCharacters()
+  payload: getCharacters(),
+  pendingType: FETCH_CHARACTERS_LOADING
 });

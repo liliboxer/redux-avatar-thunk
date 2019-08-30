@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Character({ name, photoURL }) {
+function Character({ name, photoUrl }) {
   return (
     <>
       <h3>{name}</h3>
-      <img src={photoURL}></img>
+      <img src={photoUrl}></img>
     </>
   );
 
@@ -13,7 +13,7 @@ function Character({ name, photoURL }) {
 
 Character.propTypes = {
   name: PropTypes.string.isRequired,
-  photoURL: PropTypes.string.isRequired
+  photoUrl: PropTypes.string
 };
 
 export default Character;

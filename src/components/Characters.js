@@ -4,8 +4,8 @@ import Character from './Character';
 
 function Characters({ characters }) {
   const charactersList = characters.map(c => (
-    <li key={c.id}>
-      <Character name={c.name} photoURL={c.photoURL}/>
+    <li key={c._id}>
+      <Character name={c.name} photoUrl={c.photoUrl}/>
     </li>
   ));
 
@@ -17,7 +17,8 @@ function Characters({ characters }) {
 Characters.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    photoURL: PropTypes.string.isRequired
+    photoUrl: PropTypes.string.isRequired,
+    _id: PropTypes.string.isRequired
   })).isRequired
 };
 

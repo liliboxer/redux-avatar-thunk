@@ -4,5 +4,4 @@ export const getCharacters = () => {
       if(!res.ok) throw 'Unable to get characters';
       return res.json();
     });
-
 };
